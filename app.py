@@ -104,10 +104,13 @@ if submit_button:
     recommendations = get_wine_recommendations(product, occasion, recipient, budget)
     st.session_state.recommendations = recommendations
 
- # 中央にレコメンド結果
+# 中央にレコメンド結果
 with col2:
-    
     st.header('🍾 レコメンド結果')
+
+    # `formatted_recommendations` を初期化
+    formatted_recommendations = None
+
     # レコメンド結果を取得
     if st.session_state.recommendations:
         recommendations = st.session_state.recommendations
@@ -125,6 +128,7 @@ with col2:
         )
     else:
         st.write("レコメンド結果が見つかりませんでした。")
+
 
 # 右側に商品選択と検索を表示
 with col3:
