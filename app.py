@@ -8,7 +8,7 @@ st.set_page_config(layout="wide")
 
 # OpenAI APIキーの設定
 openai.api_key = st.secrets["OPENAI_API_KEY"]
-RAKUTEN_APP_ID = ""
+RAKUTEN_APP_ID = st.secrets["RAKUTEN_APP_ID"]
 
 def get_wine_recommendations(product, occasion, recipient, budget):
     # ChatGPT 4を使用したワインのレコメンド
